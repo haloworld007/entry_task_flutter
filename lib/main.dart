@@ -44,9 +44,24 @@ class MyApp extends StatelessWidget {
                                     fontSize: 24,
                                     fontWeight: FontWeight.bold)),
                             Padding(
-                              padding: EdgeInsets.only(top: 37),
-                              child: SvgPicture.asset('images/logo-cat.svg'),
-                            )
+                              padding: EdgeInsets.fromLTRB(0, 37, 0, 118),
+                              child: SvgPicture.asset(
+                                'images/logo-cat.svg',
+                                color: Color(0xFFD5EF7F),
+                                width: 64,
+                                height: 64,
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                hintText: 'username',
+                              ),
+                            ),
+                            TextField(
+                              decoration: InputDecoration(
+                                hintText: 'password',
+                              ),
+                            ),
                           ],
                         ),
                       )),

@@ -48,18 +48,53 @@ class MyApp extends StatelessWidget {
                               child: SvgPicture.asset(
                                 'images/logo-cat.svg',
                                 color: Color(0xFFD5EF7F),
-                                width: 64,
-                                height: 64,
+                                width: 80,
+                                height: 80,
                               ),
                             ),
-                            TextField(
-                              decoration: InputDecoration(
-                                hintText: 'username',
+                            Container(
+                              width: 280,
+                              height: 48,
+                              padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(24)),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    prefixIcon: SvgPicture.asset(
+                                      'images/user.svg',
+                                      color: Color(0xFFD3C1E5),
+                                    ),
+                                    prefixIconConstraints: BoxConstraints(
+                                      maxHeight: 20,
+                                      maxWidth: 20,
+                                    ),
+                                    hintText: 'username',
+                                    border: InputBorder.none),
                               ),
                             ),
-                            TextField(
-                              decoration: InputDecoration(
-                                hintText: 'password',
+                            Container(
+                              margin: EdgeInsets.only(top: 20),
+                              width: 280,
+                              height: 48,
+                              padding: EdgeInsets.fromLTRB(15, 0, 15, 0),
+                              decoration: BoxDecoration(
+                                  border: Border.all(color: Colors.white),
+                                  borderRadius: BorderRadius.circular(24)),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  prefixIcon: SvgPicture.asset(
+                                    'images/password.svg',
+                                    color: Color(0xFFD3C1E5),
+                                  ),
+                                  prefixIconConstraints:
+                                      BoxConstraints.tightFor(
+                                    width: 20,
+                                    height: 20,
+                                  ),
+                                  hintText: 'password',
+                                  border: InputBorder.none, // 隐藏下划线
+                                ),
                               ),
                             ),
                           ],
